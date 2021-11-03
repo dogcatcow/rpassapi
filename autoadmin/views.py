@@ -28,6 +28,12 @@ def submit_account(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+# @api_view(['POST'])
+# @permission_classes((IsAuthenticated, ))
+# @authentication_classes((JSONWebTokenAuthentication,))
+# def question(request):
+
+
 
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
