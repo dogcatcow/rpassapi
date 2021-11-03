@@ -28,6 +28,7 @@ def submit_account(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
 @authentication_classes((JSONWebTokenAuthentication,))
@@ -43,11 +44,3 @@ def change_account(request):
 
         return HttpResponse(change.new_pwd)
 
-
-# 현재 요청시 시퀀셜하게 저장하는지, 날짜는 잘 들어가는지
-
-# write (댓글)
-# @api_view(['POST'])
-# mock어드민(이하 MA)에 글 등록시 api 호출 'write'
-# MA 글 등록 형식 맞춰 .. 글수신테이블 만들기
-# --> 댓글 송신 테이블도 만들기
