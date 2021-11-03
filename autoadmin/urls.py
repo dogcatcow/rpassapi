@@ -1,10 +1,8 @@
 from django.urls import path
-from .views import index, change, change_pw, fetch
-# from . import views
+from .views import index, submit_account, change_account
 
 urlpatterns = [
     path('', index),
-    path('change/', change),
-    path('change_pw/', change_pw),
-    path('fetch/', fetch)
+    path('submit_account/', submit_account),
+    path('change_account/', change_account)
 ]
